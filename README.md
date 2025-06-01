@@ -80,7 +80,7 @@ SELECT
   UFO_shape,
   COUNT(*) AS Sightings
 FROM 
-  `ufo_dataset.ufo_sightings`
+  `nombre del laboratorio`
 WHERE 
   country = 'us'
 GROUP BY 
