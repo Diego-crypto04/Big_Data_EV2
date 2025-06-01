@@ -36,14 +36,86 @@ Cloud Storage -> Buckets -> Create
    ```
 En el cual se crea al bucket necesario para cargar el archivo Excel (.csv) para la extracción de datos, el bucket creado tiene como nombre, el apellido de todos los integrantes del grupo de la siguiente forma:
 
+CARGAR IMAGEN DEL BUCKET
 
-el conjunto de datos utilizados para este proyecto corresponde a un archivo denominado ufo_sighting.csv, el cual contiene registros históricos de avistamientos de objetos voladores no identificados (OVNIs). Este dataset incluye información relevante como fecha y hora del evento (Date_time), ubicación (city, state/province, country), características del objeto (UFO_shape), duración estimada del encuentro, descripción del suceso, y coordenadas geográficas (latitude y longitude), entre otros campos.
+El conjunto de datos utilizados para este proyecto corresponde a un archivo denominado ufo_sighting.csv, el cual contiene registros históricos de avistamientos de objetos voladores no identificados (OVNIs). Este dataset incluye información relevante como fecha y hora del evento (Date_time), ubicación (city, state/province, country), características del objeto (UFO_shape), duración estimada del encuentro, descripción del suceso, y coordenadas geográficas (latitude y longitude), entre otros campos.
 
+Es necesario otorgar el rol de `Agente de Servicios de Cloud Dataflow`, o bien, `Cloud Dataflow Service Agent` para poder realizar las consultas en Alterxys:
 
+CARGAR IMAGEN DE ROL
+
+Se procede a cargar la base de datos de nombre `ovni` en la Big Query, en la cuál se cargará la posterior tabla a crear, por tanto, se accede a la Big Query y se crea de de la siguiente manera:
+```
+Big Query -> Se busca el nombre del laboratorio -> Se seleccionan (⋮) -> Create Dataset -> Y se elige el nombre de ovni
+   ```
+
+Posteriormente, se conecta este archivo desde la herramienta Cloud Dataprep (Alteryxs) , con el objetivo de revisar y preparar los datos antes de su análisis. Esta conexión facilitó el acceso al contenido del archivo para su posterior limpieza, validación y transformación, como parte del proceso de preparación de datos batch previo a su carga en BigQuery. 
+
+Luego de creado el flujo de datos, se procede a cargar la base de datos de la siguiente forma:
+
+```
+Connect to your Data -> Import DataSet -> Cloud Storage -> Bucket -> ufo_sighting.csv -> Import & Add DataFlow
+   ```
+
+Se crea la siguiente vista:
+
+CARGAR IMAGEN DATAFLOW
+
+Se elige el `recipe`, dentro de esto, se realiza la limpieza de la tabla cargada, se puede observar que presenta valores en gris que son lo valores nulos dentro de la columna y los cuales se pueden omitir sin perder la información necesaria a manejar y por otro lado, se tienen los valores presentados en rojo, que son valores inconsistentes o pérdidos dentro de las columnas. La limpieza realizada para poder evaluar los datos se hace de la siguiente forma:
+
+CARGAR LIMPIEZA DE DATOS
+
+Se eliminan los valores nulos dentro de las columnas  `Date_time`,  `state/province`,  `country`,  `UFO_shape`. También, se observa que se cambia el nombre de la columna state/province por  `state_province`, esto con el fin de no generar errores al momento de la creación de la tabla avistamientos.
+
+Siguiendo con esto, se procede a ejecutar la cración de la tabla `avistamientos` de la siguiente manera:
+```
+Run -> En Actions en Create-CSV -> Edit -> Big Query -> ovni -> Create a new table -> Se escoge el nombre de la tabla como "avistamientos"
+   ```
+
+Una vez creada la tabla, es necesario volver al launcher de Cloud Boost Skill para comenzar las consultas necesarias. Dentro de la sección Big Query y en el lab creado, se puede observar que en la base de datos `ovni`, está la reciente tabla creada `avistamientos`, en la cuál se procede a realizar las consultas de SQL para el analisis de datos.
 
 ## Consultas SQL destacadas
+ ```
+SELECT 
+  UFO_shape,
+  COUNT(*) AS Sightings
+FROM 
+  `ufo_dataset.ufo_sightings`
+WHERE 
+  country = 'us'
+GROUP BY 
+  UFO_shape
+ORDER BY 
+  Sightings DESC
+LIMIT 5;
+ ```
 
-...
+ ```
+SELECT 
+  EXTRACT(YEAR FROM DATETIME(Date_time)) AS Year,
+  COUNT(*) AS Sightings
+FROM 
+  `nombre del laboratorio`
+WHERE 
+  country = 'us'
+GROUP BY 
+  Year
+ORDER BY 
+  Sightings DESC;
+ ```
+ ```
+ SELECT 
+  `city` AS City,
+  COUNT(*) AS Sightings
+FROM 
+  `nombre del laboratorio`
+WHERE 
+  country = 'us'
+GROUP BY 
+  City
+ORDER BY 
+  Sightings DESC;
+```
 
 ## Gráficos con Looker Studio
 
