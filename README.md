@@ -30,8 +30,16 @@ Finalmente, se construyeron visualizaciones interactivas en Looker Studio, enfoc
 El objetivo principal del proyecto es diseñar y ejecutar un proceso completo de análisis de datos en un entorno Big Data, utilizando herramientas de Google Cloud Platform, con el fin de gestionar, transformar y visualizar información proveniente de un conjunto de datos sobre avistamientos de OVNIs.
 
 ## Metodología
+El taller es realizado en la plataforma `Google Skill Boost`, exactamente en el `Lab GSP823`, en el cual se accede con el usuario y contraseña. Esto lleva directo al launcher del taller a realizar, en él es necesario crear un bucket, de la siguiente forma:
+```
+Cloud Storage -> Buckets -> Create
+   ```
+En el cual se crea al bucket necesario para cargar el archivo Excel (.csv) para la extracción de datos, el bucket creado tiene como nombre, el apellido de todos los integrantes del grupo de la siguiente forma:
 
-...
+
+el conjunto de datos utilizados para este proyecto corresponde a un archivo denominado ufo_sighting.csv, el cual contiene registros históricos de avistamientos de objetos voladores no identificados (OVNIs). Este dataset incluye información relevante como fecha y hora del evento (Date_time), ubicación (city, state/province, country), características del objeto (UFO_shape), duración estimada del encuentro, descripción del suceso, y coordenadas geográficas (latitude y longitude), entre otros campos.
+
+
 
 ## Consultas SQL destacadas
 
