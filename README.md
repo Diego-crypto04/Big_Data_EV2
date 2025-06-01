@@ -11,7 +11,7 @@
 
 - [Introducción](#introducción)
 - [Objetivo del Proyecto](#objetivo-del-proyecto)
-- [Limpieza con Dataprep](#limpieza-con-dataprep)
+- [Metodología](#metodología)
 - [Consultas SQL destacadas](#consultas-sql-destacadas)
 - [Gráficos con Looker Studio](#gráficos-con-looker-studio)
 - [Resultados e insights](#resultados-e-insights)
@@ -29,7 +29,7 @@ Finalmente, se construyeron visualizaciones interactivas en Looker Studio, enfoc
 
 El objetivo principal del proyecto es diseñar y ejecutar un proceso completo de análisis de datos en un entorno Big Data, utilizando herramientas de Google Cloud Platform, con el fin de gestionar, transformar y visualizar información proveniente de un conjunto de datos sobre avistamientos de OVNIs.
 
-## Limpieza con Dataprep
+## Metodología
 
 ...
 
