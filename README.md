@@ -151,15 +151,15 @@ Este proyecto evidenció el desarrollo de habilidades clave en la gestión de da
 
 ### Formas de los Objetos más vistos en avistamientos
 Tabla de resultados de la consulta 1
-![barra](imagenes/tabla1.jpeg)
+![barra](imagenes/tabla1.jpg)
 
 ### La Cantidad de Avistamientos por Año
 Tabla de resultados de la consulta 2
-![barra](imagenes/tabla2.jpeg)
+![barra](imagenes/tabla2.jpg)
 
 ### La Cantidad de Avistamientos por Año
 Tabla de resultados de la consulta 3
-![barra](imagenes/tabla3.jpeg)
+![barra](imagenes/tabla3.jpg)
 
 
 
