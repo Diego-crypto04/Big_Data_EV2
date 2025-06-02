@@ -116,12 +116,20 @@ GROUP BY
 ORDER BY 
   Sightings DESC;
 ```
+## Resultados 
+
+Dentro de las consultas destacadas, se pueden extraer los siguientes gráficos:
+
+# Formas de los Objetos más vistos en avistamientos
+
+Este gráfico de torta representa las cinco formas más comunes de objetos voladores no identificados reportadas en Estados Unidos. Se observa que las formas "light" y "circle" lideran los reportes.
+
+![torta](imagenes/graficotorta.jpeg)
+
+
+
 
 ## Gráficos con Looker Studio
-
-...
-
-## Resultados e insights
 
 ...
 
