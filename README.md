@@ -126,12 +126,18 @@ Este gráfico de torta representa las cinco formas más comunes de objetos volad
 
 ![torta](imagenes/torta.jpeg)
 
+### La Cantidad de Avistamientos por Año
 
+En el presente gráfico se puede observar que la mayor cantidad de avistamientos es dado el año 2012, seguido por el 2013 y en tercer lugar el 2011, esto puede haberse dado debido al boom de la época relacionada con el fin del mundo.
 
+![barra](imagenes/barras.jpeg)
 
-## Gráficos con Looker Studio
+### La Cantidad de Avistamientos por Año
 
-...
+Finalmente, se tiene el gráfico tipo mapa para la consulta de la mayor cantidad de avistamientos por estado dentro de Estados Unidos, esta visualización permite identificar focos urbanos donde estos fenómenos son más reportados. Se puede observar que 
+
+![barra](imagenes/mapa2.jpeg)
+
 
 ## Conclusión
 
