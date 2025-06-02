@@ -124,7 +124,7 @@ Dentro de las consultas destacadas, se pueden extraer los siguientes gráficos:
 
 Este gráfico de torta representa las cinco formas más comunes de objetos voladores no identificados reportadas en Estados Unidos. Se observa que las formas "light" y "circle" lideran los reportes.
 
-![torta](imagenes/graficotorta.jpeg)
+![torta](imagenes/grafico torta.jpeg)
 
 
 
