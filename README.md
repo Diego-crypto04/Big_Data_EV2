@@ -105,14 +105,14 @@ ORDER BY
  ```
  ```
  SELECT 
-  `city` AS City,
+  `state_province` AS State,
   COUNT(*) AS Sightings
 FROM 
   `nombre del laboratorio`
 WHERE 
   country = 'us'
 GROUP BY 
-  City
+  State
 ORDER BY 
   Sightings DESC;
 ```
@@ -134,19 +134,32 @@ En el presente gráfico se puede observar que la mayor cantidad de avistamientos
 
 ### La Cantidad de Avistamientos por Año
 
-Finalmente, se tiene el gráfico tipo mapa para la consulta de la mayor cantidad de avistamientos por estado dentro de Estados Unidos, esta visualización permite identificar focos urbanos donde estos fenómenos son más reportados. Se puede observar que 
+Finalmente, se tiene el gráfico tipo mapa para la consulta de la mayor cantidad de avistamientos por estado dentro de Estados Unidos, esta visualización permite identificar focos urbanos donde estos fenómenos son más reportados. Se puede observar que California presenta la mayor cantidad de avistamientos, seguido por Washington y en tercer lugar, Florida.
 
 ![barra](imagenes/mapa2.jpeg)
 
 
 ## Conclusión
 
-...
+El desarrollo de este proyecto permitió llevar a cabo un análisis completo de datos en un entorno Big Data, aplicando herramientas del ecosistema de Google Cloud de manera efectiva. A través del uso de Cloud Storage, Cloud Dataprep y BigQuery, se logró construir un flujo de trabajo estructurado para la ingesta, limpieza, transformación y análisis de un conjunto de datos extenso y real.
+
+Las consultas realizadas en BigQuery permitieron obtener información relevante sobre los patrones de avistamientos de OVNIs, mientras que las visualizaciones interactivas en Looker Studio facilitaron la interpretación de los resultados, aportando valor al análisis desde una perspectiva visual y de negocio.
+
+Este proyecto evidenció el desarrollo de habilidades clave en la gestión de datos en la nube, el uso de herramientas de análisis y la generación de insights. Como proyección futura, sería interesante aplicar técnicas de machine learning sobre estos datos o realizar un análisis comparativo con otros fenómenos a nivel mundial.
 
 ## Anexos
 
-...
+### Formas de los Objetos más vistos en avistamientos
+Tabla de resultados de la consulta 1
+![barra](imagenes/tabla1.jpeg)
 
+### La Cantidad de Avistamientos por Año
+Tabla de resultados de la consulta 2
+![barra](imagenes/tabla2.jpeg)
+
+### La Cantidad de Avistamientos por Año
+Tabla de resultados de la consulta 3
+![barra](imagenes/tabla3.jpeg)
 
 
 
