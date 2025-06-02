@@ -42,7 +42,7 @@ El conjunto de datos utilizados para este proyecto corresponde a un archivo deno
 
 Es necesario otorgar el rol de `Agente de Servicios de Cloud Dataflow`, o bien, `Cloud Dataflow Service Agent` para poder realizar las consultas en Alterxys:
 
-CARGAR IMAGEN DE ROL
+![roles](imagenes/rol.jpg)
 
 Se procede a cargar la base de datos de nombre `ovni` en la Big Query, en la cuál se cargará la posterior tabla a crear, por tanto, se accede a la Big Query y se crea de de la siguiente manera:
 ```
@@ -59,11 +59,11 @@ Connect to your Data -> Import DataSet -> Cloud Storage -> Bucket -> ufo_sightin
 
 Se crea la siguiente vista:
 
-CARGAR IMAGEN DATAFLOW
+![Data Flow](imagenes/dataflow.jpg)
 
 Se elige el `recipe`, dentro de esto, se realiza la limpieza de la tabla cargada, se puede observar que presenta valores en gris que son lo valores nulos dentro de la columna y los cuales se pueden omitir sin perder la información necesaria a manejar y por otro lado, se tienen los valores presentados en rojo, que son valores inconsistentes o pérdidos dentro de las columnas. La limpieza realizada para poder evaluar los datos se hace de la siguiente forma:
 
-CARGAR LIMPIEZA DE DATOS
+![Data Limpio](imagenes/datosl.jpg)
 
 Se eliminan los valores nulos dentro de las columnas  `Date_time`,  `state/province`,  `country`,  `UFO_shape`. También, se observa que se cambia el nombre de la columna state/province por  `state_province`, esto con el fin de no generar errores al momento de la creación de la tabla avistamientos.
 
