@@ -14,7 +14,7 @@
 - [Metodología](#metodología)
 - [Consultas SQL destacadas](#consultas-sql-destacadas)
 - [Gráficos con Looker Studio](#gráficos-con-looker-studio)
-- [Resultados e insights](#resultados-e-insights)
+- [Resultados](#resultados)
 - [Conclusión](#conclusión)
 - [Anexos](#anexos)
 
